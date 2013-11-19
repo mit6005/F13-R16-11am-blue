@@ -65,7 +65,7 @@ public class Note implements Music {
         if (this == obj)
             return true;
         if (obj == null)
-            return true;
+            return false;
         if (getClass() != obj.getClass())
             return false;
         final Note other = (Note) obj;
@@ -83,10 +83,4 @@ public class Note implements Music {
         return pitch.toString() + duration;
     }
     
-    public static void testNote() {
-        Note n = new Note(10, new Pitch('C'), Instrument.PIANO);
-        System.out.println("Note is: " + n);
-        Note n = new Note(10, new Pitch('C').transpose(1), Instrument.PIANO);
-        System.out.println("Note is: " + n);
-    }
 }
