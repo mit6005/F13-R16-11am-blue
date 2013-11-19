@@ -22,6 +22,9 @@ public class Concat implements Music {
         checkRep();
     }
     
+    public Music second(){
+    	return second;
+    }
     /**
      * @return first piece in this concatenation
      */
